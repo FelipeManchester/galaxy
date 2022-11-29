@@ -1,22 +1,27 @@
 import './App.css';
-
+import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+// pages
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Search from './pages/Search/Search';
 
+// components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+// context
 import { AuthProvider } from './contexts/AuthContext';
-import { useEffect, useState } from 'react';
+
+// hooks
 import { useAuthentication } from './hooks/useAuthentication';
+import Post from './pages/Post/Post';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -89,6 +94,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />}></Route>
               <Route path="/about" element={<About />}></Route>
+              <Route path="/search" element={<Search />}></Route>
+              <Route path="/posts/:id" element={<Post />} />
               <Route
                 path="/login"
                 element={!user ? <Login /> : <Navigate to="/" />}
@@ -98,7 +105,7 @@ function App() {
                 element={!user ? <Register /> : <Navigate to="/" />}
               ></Route>
               <Route
-                path="/post/create"
+                path="/posts/create"
                 element={user ? <CreatePost /> : <Navigate to="/login" />}
               ></Route>
               <Route
