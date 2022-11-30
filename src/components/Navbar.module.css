@@ -23,3 +23,8 @@
 .links_list li a {
   padding: .4em .6em;
 }
+
+.active {
+  background-color: #000;
+  color: #fff;
+}

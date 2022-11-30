@@ -22,6 +22,7 @@ import { AuthProvider } from './contexts/AuthContext';
 // hooks
 import { useAuthentication } from './hooks/useAuthentication';
 import Post from './pages/Post/Post';
+import EditPost from './pages/EditPost/EditPost';
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -103,6 +104,10 @@ function App() {
               <Route
                 path="/register"
                 element={!user ? <Register /> : <Navigate to="/" />}
+              ></Route>
+              <Route
+                path="/posts/edit/:id"
+                element={user ? <EditPost /> : <Navigate to="/login" />}
               ></Route>
               <Route
                 path="/posts/create"
