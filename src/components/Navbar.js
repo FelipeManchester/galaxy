@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.brand}>
-        Galax<span>y</span>
+        Gala<span>x</span>y
       </NavLink>
       <ul className={styles.links_list}>
         <li>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 to="/dashboard"
                 className={({ isActive }) => (isActive ? styles.active : '')}
               >
-                Dashboard
+                Perfil
               </NavLink>
             </li>
           </>

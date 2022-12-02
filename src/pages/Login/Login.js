@@ -22,7 +22,7 @@ const Login = () => {
 
     const res = await login(user);
 
-    console.log(user);
+    console.log(res);
   };
 
   useEffect(() => {
