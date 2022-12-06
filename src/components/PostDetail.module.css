@@ -2,6 +2,10 @@
   margin-bottom: 2em;
 }
 
+.post_detail h2 {
+  color: #aaa;
+}
+
 .post_detail img {
   max-width: 600px;
 }
@@ -13,6 +17,7 @@
 .post_detail .tags {
   margin-bottom: 1.2em;
   display: flex;
+  color: #aaa;
 }
 
 .tags p {
@@ -25,7 +30,7 @@
 
 .createdby {
   font-style: italic;
-  color: #444;
+  color: #FB2576;
   font-style: 0.8em;
   margin-bottom: 1em;
 }

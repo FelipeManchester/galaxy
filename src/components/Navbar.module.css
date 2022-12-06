@@ -1,14 +1,17 @@
 .navbar {
   display: flex;
-  box-shadow: rgba(0, 0, 0, .15) 0px -2px 10px 0px;
+  box-shadow: rgba(255, 255, 255, 0.80) 0px -2px 10px 0px;
   justify-content: space-between;
   align-items: center;
   padding: .5em 2em;
-  background-color: #f0d1fb;
+  background-color: #000000;
 }
 
 .brand {
   font-size: 1.2em;
+  color: white;
+  font-family: 'Martel Sans', sans-serif;
+  letter-spacing: 4px;
 }
 
 .brand span {
@@ -23,9 +26,10 @@
 
 .links_list li a {
   padding: .4em .6em;
+  color: white;
 }
 
 .active {
   color: #2D033B;
-  background-color: white;
+  background-color: black;
 }
