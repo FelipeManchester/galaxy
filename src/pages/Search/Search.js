@@ -17,7 +17,7 @@ const Search = () => {
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
             <p>Não foi encontrado nenhum post a partir da sua busca...</p>
-            <Link to="/" className="btn btn-dark">
+            <Link to="/" className="btn">
               Voltar
             </Link>
           </div>

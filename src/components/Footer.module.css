@@ -12,3 +12,9 @@
   font-weight: 900;
   text-transform: uppercase;
 }
+
+.footer a {
+  color: #0072b1;
+  font-weight: 900;
+  text-decoration: underline;
+}

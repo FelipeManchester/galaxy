@@ -14,6 +14,10 @@
   letter-spacing: 4px;
 }
 
+.brand:hover {
+  letter-spacing: 5px;
+}
+
 .brand span {
   font-weight: 900;
   text-transform: uppercase;
@@ -30,6 +34,5 @@
 }
 
 .active {
-  color: #2D033B;
-  background-color: black;
+  background-color: #FB2576;
 }

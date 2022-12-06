@@ -74,9 +74,8 @@ const Post = () => {
               e.preventDefault();
               navigate(-1);
             }}
-            className="btn btn-dark"
           >
-            Voltar
+            <button className="btn">Voltar</button>
           </Link>
         </>
       )}

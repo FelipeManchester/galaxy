@@ -36,21 +36,18 @@ const Dashboard = () => {
               <div key={post.id} className={styles.post_row}>
                 <p>{post.title}</p>
                 <div>
-                  <Link to={`/posts/${post.id}`} className="btn btn-outline">
-                    Ver
+                  <Link to={`/posts/${post.id}`}>
+                    <button className="btn">Ver</button>
                   </Link>
-                  <Link
-                    to={`/posts/edit/${post.id}`}
-                    className="btn btn-outline"
-                  >
-                    Editar
+                  <Link to={`/posts/edit/${post.id}`}>
+                    <button className="btn">Editar</button>
                   </Link>
                   <button
                     onClick={() => {
-                      if (window.confirm('Deseja deletar esse post?'))
+                      if (window.confirm('Deseja realmente deletar esse post?'))
                         deleteDocument(post.id);
                     }}
-                    className="btn btn-outline btn-danger"
+                    className="btn"
                   >
                     Excluir
                   </button>

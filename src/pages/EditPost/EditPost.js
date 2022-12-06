@@ -137,7 +137,7 @@ const EditPost = () => {
                 e.preventDefault();
                 navigate(-1);
               }}
-              className="btn btn-dark"
+              className="btn"
             >
               Voltar
             </Link>

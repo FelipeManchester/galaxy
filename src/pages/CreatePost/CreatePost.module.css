@@ -4,9 +4,14 @@
 
 .create_post h2 {
   font-size: 2.2em;
+  color: #aaa;
 }
 
 .create_post p {
   color: #aaa;
   margin-bottom: 2em;
+}
+
+.create_post textarea {
+  resize: none;
 }

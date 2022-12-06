@@ -52,7 +52,7 @@ const CreatePost = () => {
   return (
     <div className={styles.create_post}>
       <h2>Criar Post</h2>
-      <p>Crie um post e compartilhe seus assuntos favoritos!</p>
+      <p>Preencha os campos para criar seu post</p>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Título:</span>
@@ -60,7 +60,7 @@ const CreatePost = () => {
             type="text"
             name="title"
             required
-            placeholder="Pense em um bom título..."
+            placeholder="Pense em um título..."
             onChange={(e) => setTitle(e.target.value)}
             value={title}
           />
