@@ -13,6 +13,10 @@
   margin-bottom: 30px;
 }
 
+.search_container h2 {
+  color: #aaa;
+}
+
 .noposts {
   text-align: center;
 }

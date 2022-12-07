@@ -7,6 +7,11 @@
   background-color: #000000;
 }
 
+.navbar button {
+  color: white;
+
+}
+
 .brand {
   font-size: 1.2em;
   color: white;

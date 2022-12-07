@@ -5,11 +5,22 @@ const About = () => {
   return (
     <div className={styles.about}>
       <h2>
-        Sobre o Gala<span>x</span>y
+        Sobre o gala<span>x</span>y
       </h2>
       <p>
-        Este projeto consiste em um miniblog feito com React no front-end e
-        Firebase no back-end.
+        Eu sempre quis criar uma página relacionada as belezas do nosso universo
+        e com esse projeto eu pude tirar essa ideia do papel.
+      </p>
+      <hr />
+      <p>
+        O galaxy consiste em um 'miniblog' onde você pode compartilhar suas
+        fotos favoritas relacionadas a galáxia, as estrelas, ao universo e tudo
+        que isso envolve.
+      </p>
+      <hr />
+      <p>
+        Esse projeto foi feito utilizando React no front-end e Firebase no
+        back-end.
       </p>
       <Link to="/posts/create" className="btn">
         Criar post

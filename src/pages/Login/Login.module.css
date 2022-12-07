@@ -2,6 +2,8 @@
   text-align: center;
 }
 
-.login p {
+.login p,
+h1,
+span {
   color: #aaa;
 }

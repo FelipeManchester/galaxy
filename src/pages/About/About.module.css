@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.about h2 {
+  color: #FB2576;
+}
+
 .about p {
   color: #aaa;
   margin-bottom: 2em;

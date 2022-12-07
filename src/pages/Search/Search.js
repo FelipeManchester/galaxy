@@ -3,11 +3,11 @@ import styles from './Search.module.css';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import { useQuery } from '../../hooks/useQuery';
 import PostDetail from '../../components/PostDetail';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Search = () => {
   const query = useQuery();
   const search = query.get('q');
-
+  const navigate = useNavigate();
   const { documents: posts } = useFetchDocuments('posts', search);
 
   return (
@@ -17,12 +17,26 @@ const Search = () => {
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
             <p>Não foi encontrado nenhum post a partir da sua busca...</p>
-            <Link to="/" className="btn">
-              Voltar
+            <Link to="/">
+              <button className="btn">Voltar</button>
             </Link>
           </div>
         )}
-        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
+        {posts &&
+          posts.map((post) => (
+            <>
+              <PostDetail key={post.id} post={post} />
+              <Link
+                to={'..'}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(-1);
+                }}
+              >
+                <button className="btn">Voltar</button>
+              </Link>
+            </>
+          ))}
       </div>
     </div>
   );

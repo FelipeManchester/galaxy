@@ -3,7 +3,9 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <h3>Compartilhe suas fotos favoritas do universo!</h3>
+      <h3>
+        <q>see you on the dark side of the moon.</q>
+      </h3>
       <p>
         gala<span>x</span>y &copy; 2022
       </p>

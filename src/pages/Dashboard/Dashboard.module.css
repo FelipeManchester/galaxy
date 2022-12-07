@@ -9,6 +9,7 @@
 .dashboard h2 {
   font-size: 2.2em;
   margin-bottom: .5em;
+  color: #aaa
 }
 
 .dashboard p {
@@ -47,7 +48,7 @@
 }
 
 .post_row p {
-  color: #000;
+  color: #aaa;
 }
 
 .post_row button {
