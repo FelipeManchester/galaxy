@@ -4,12 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: .5em 2em;
-  background-color: #000000;
-}
-
-.navbar button {
-  color: white;
-
+  background-color: #0b0b0b;
 }
 
 .brand {
@@ -36,6 +31,12 @@
 .links_list li a {
   padding: .4em .6em;
   color: white;
+}
+
+.links_list li button {
+  color: white;
+  position: relative;
+  bottom: 1px;
 }
 
 .active {
