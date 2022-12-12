@@ -3,7 +3,9 @@ body {
   background: linear-gradient(90deg, rgba(63, 0, 113, 1) 9%, rgba(21, 0, 80, 1) 40%, rgba(37, 0, 93, 1) 75%, rgba(63, 0, 113, 1) 100%);
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: 'Martel Sans', sans-serif;
+  width: 100%;
 }
 
 
