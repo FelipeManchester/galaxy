@@ -13,18 +13,18 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 const Navbar = () => {
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.brand}>
         gala<span>x</span>y
       </NavLink>
 
-      <button onClick={toggleMenu} className={styles.hamburger}>
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className={styles.hamburger}
+      >
         {menuOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
       </button>
       {menuOpen && (
@@ -33,6 +33,7 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) => (isActive ? styles.active : '')}
+              onClick={() => setMenuOpen(!menuOpen)}
             >
               Home
             </NavLink>
@@ -43,6 +44,7 @@ const Navbar = () => {
                 <NavLink
                   to="/login"
                   className={({ isActive }) => (isActive ? styles.active : '')}
+                  onClick={() => setMenuOpen(!menuOpen)}
                 >
                   Entrar
                 </NavLink>
@@ -51,6 +53,7 @@ const Navbar = () => {
                 <NavLink
                   to="/register"
                   className={({ isActive }) => (isActive ? styles.active : '')}
+                  onClick={() => setMenuOpen(!menuOpen)}
                 >
                   Cadastrar
                 </NavLink>
@@ -63,6 +66,7 @@ const Navbar = () => {
                 <NavLink
                   to="/posts/create"
                   className={({ isActive }) => (isActive ? styles.active : '')}
+                  onClick={() => setMenuOpen(!menuOpen)}
                 >
                   Novo post
                 </NavLink>
@@ -71,6 +75,7 @@ const Navbar = () => {
                 <NavLink
                   to="/dashboard"
                   className={({ isActive }) => (isActive ? styles.active : '')}
+                  onClick={() => setMenuOpen(!menuOpen)}
                 >
                   Perfil
                 </NavLink>
@@ -81,6 +86,7 @@ const Navbar = () => {
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? styles.active : '')}
+              onClick={() => setMenuOpen(!menuOpen)}
             >
               Sobre
             </NavLink>
