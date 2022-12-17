@@ -8,6 +8,9 @@ body {
   width: 100%;
 }
 
+/* * {
+  outline: 1px solid #f00 !important;
+} */
 
 input::placeholder,
 textarea::placeholder {
@@ -224,5 +227,12 @@ button[disabled] {
 
   100% {
     transform: rotateX(65deg) rotateZ(360deg) scale(1.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 0.7rem;
+    display: grid;
   }
 }

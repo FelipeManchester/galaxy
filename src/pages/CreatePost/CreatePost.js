@@ -92,7 +92,7 @@ const CreatePost = () => {
             type="text"
             name="tags"
             required
-            placeholder="Insira as tags separadas por vírgula"
+            placeholder="Insira as tags separadas por vírgulas"
             onChange={(e) => setTags(e.target.value)}
             value={tags}
           />

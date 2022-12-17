@@ -11,10 +11,16 @@
 .footer span {
   font-weight: 900;
   text-transform: uppercase;
+  color: #FB2576;
+}
+
+.footer h3 {
+  text-align: center;
 }
 
 .footer a {
   color: #0072b1;
   font-weight: 900;
   text-decoration: underline;
+  margin-left: 2px;
 }

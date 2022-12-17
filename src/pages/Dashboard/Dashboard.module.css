@@ -56,3 +56,10 @@
   height: 40px;
   font-size: 0.7em;
 }
+
+@media (max-width: 768px) {
+
+  button .btn {
+    padding: 100px !important;
+  }
+}

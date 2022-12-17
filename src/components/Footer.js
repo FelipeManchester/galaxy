@@ -10,7 +10,7 @@ const Footer = () => {
         gala<span>x</span>y &copy; 2022
       </p>
       <p>
-        Feito com ❤ por{' '}
+        Feito com <span>❤</span> por
         <a
           target="_blank"
           rel="noreferrer"

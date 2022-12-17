@@ -40,3 +40,9 @@ p {
 .tags span {
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .post_container h1 {
+    font-size: 1.4rem;
+  }
+}

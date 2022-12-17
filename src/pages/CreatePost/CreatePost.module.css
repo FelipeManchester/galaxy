@@ -15,3 +15,18 @@
 .create_post textarea {
   resize: none;
 }
+
+
+@media (max-width: 768px) {
+
+  .create_post form {
+    margin-left: 1.8rem;
+    width: 80vw;
+  }
+
+  .create_post input,
+  textarea {
+    width: 80vw;
+    font-size: 0.7rem;
+  }
+}
