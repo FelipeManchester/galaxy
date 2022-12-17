@@ -84,7 +84,7 @@
   }
 
   .links_list li {
-    margin-top: 1rem;
+    margin-top: .5rem;
   }
 
   @keyframes show-down {
