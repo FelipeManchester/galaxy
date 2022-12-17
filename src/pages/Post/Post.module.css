@@ -45,4 +45,8 @@ p {
   .post_container h1 {
     font-size: 1.4rem;
   }
+
+  .post_container img {
+    height: 80vh;
+  }
 }
