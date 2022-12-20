@@ -8,6 +8,8 @@
 
 .post_detail img {
   max-width: 600px;
+  display: block;
+  margin: 0 auto;
 }
 
 .post_detail h2 {

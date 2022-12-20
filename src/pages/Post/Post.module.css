@@ -4,6 +4,8 @@
 
 .post_container img {
   max-width: 600px;
+  display: block;
+  margin: 0 auto;
 }
 
 .post_container h1,
@@ -48,5 +50,6 @@ p {
 
   .post_container img {
     height: 80vh;
+    max-width: 100%;
   }
 }
