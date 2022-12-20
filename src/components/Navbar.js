@@ -27,77 +27,69 @@ const Navbar = () => {
       >
         {menuOpen ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
       </button>
-      {menuOpen && (
-        <ul className={styles.links_list}>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? styles.active : '')}
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              Home
-            </NavLink>
-          </li>
-          {!user && (
-            <>
-              <li>
-                <NavLink
-                  to="/login"
-                  className={({ isActive }) => (isActive ? styles.active : '')}
-                  onClick={() => setMenuOpen(!menuOpen)}
-                >
-                  Entrar
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/register"
-                  className={({ isActive }) => (isActive ? styles.active : '')}
-                  onClick={() => setMenuOpen(!menuOpen)}
-                >
-                  Cadastrar
-                </NavLink>
-              </li>
-            </>
-          )}
-          {user && (
-            <>
-              <li>
-                <NavLink
-                  to="/posts/create"
-                  className={({ isActive }) => (isActive ? styles.active : '')}
-                  onClick={() => setMenuOpen(!menuOpen)}
-                >
-                  Novo post
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/dashboard"
-                  className={({ isActive }) => (isActive ? styles.active : '')}
-                  onClick={() => setMenuOpen(!menuOpen)}
-                >
-                  Perfil
-                </NavLink>
-              </li>
-            </>
-          )}
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? styles.active : '')}
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              Sobre
-            </NavLink>
-          </li>
-          {user && (
+      <ul className={menuOpen ? styles.links_list : styles.links_list_closed}>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.active : '')}
+          >
+            Home
+          </NavLink>
+        </li>
+        {!user && (
+          <>
             <li>
-              <button onClick={logout}>Sair</button>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Entrar
+              </NavLink>
             </li>
-          )}
-        </ul>
-      )}
+            <li>
+              <NavLink
+                to="/register"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Cadastrar
+              </NavLink>
+            </li>
+          </>
+        )}
+        {user && (
+          <>
+            <li>
+              <NavLink
+                to="/posts/create"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Novo post
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                Perfil
+              </NavLink>
+            </li>
+          </>
+        )}
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? styles.active : '')}
+          >
+            Sobre
+          </NavLink>
+        </li>
+        {user && (
+          <li>
+            <button onClick={logout}>Sair</button>
+          </li>
+        )}
+      </ul>
     </nav>
   );
 };
