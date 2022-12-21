@@ -7,7 +7,7 @@
 }
 
 .about h2 {
-  color: #FB2576;
+  color: #aaa;
 }
 
 .about p {
@@ -18,6 +18,8 @@
 .about span {
   font-weight: 900;
   text-transform: uppercase;
+  color: #FB2576;
+  margin: 2px;
 }
 
 .about a {

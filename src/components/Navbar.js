@@ -92,7 +92,13 @@ const Navbar = () => {
         </li>
         {user && (
           <li>
-            <button onClick={logout}>Sair</button>
+            <button
+              onClick={() => {
+                if (window.confirm('Deseja realmente sair?')) logout();
+              }}
+            >
+              Sair
+            </button>
           </li>
         )}
       </ul>
